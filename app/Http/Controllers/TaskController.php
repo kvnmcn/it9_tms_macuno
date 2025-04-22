@@ -42,6 +42,7 @@ class TaskController extends Controller
             'description' => $request->description,
             // 'is_completed'=>$request->is_completed,
         ]);
+        return redirect()->route('tasks.index')->with('success', 'Your task was created successfully!');
     }
 
     /**
